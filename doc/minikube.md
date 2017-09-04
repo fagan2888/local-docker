@@ -116,7 +116,7 @@
 1. Change to the flask-kube directory
 
   ```
-  cd k8s-py/python/flask-kube
+  cd flask-kube
   ```
 
 2. Get the latest Python image
@@ -253,28 +253,49 @@ http://192.168.99.100:5000/
 ### Run the Kubernetes container with the stateless app
 
 1. Create a Kubernetes deployment
-kubectl create -f k8s\deployment.yaml
+
+  ```
+  kubectl create -f k8s\deployment.yaml
+  ```
 
 2. Describe the deployment
-kubectl describe deployment flask-kube-deployment
+
+  ```
+  kubectl describe deployment flask-kube
+  ```
 
 3. List the pods create by the deployment
-kubectl get pods -l app=flask-kube
+
+  ```
+  kubectl get pods -l app=flask-kube
+  ```
 
 4. Describe a single pod
-kubectl get pods -l app=flask-kube -o name | sed s#pods/## | xargs kubectl describe pod
 
-### Create a Kubernetest service to access the app
+  ```
+  kubectl get pods -l app=flask-kube -o name | sed s#pods/## | xargs kubectl describe pod
+  ```
+
+### Create a Kubernetes service to access the app
 
 1. Create a Kubernetes deployment
-kubectl create -f k8s\service.yaml
+
+  ```
+  kubectl create -f k8s\service.yaml
+  ```
 
 2. Get the service created
-kubectl get service flask-kube
+
+  ```
+  kubectl get service flask-kube
+  ```
 
 3. Using the port from the previous step and the ip obtained earler open this address
 http://192.168.99.100:32753/
 
 4. Delete service & deployment
-kubectl delete service,deployment flask-kube
+
+  ```
+  kubectl delete service,deployment flask-kube
+  ```
 
