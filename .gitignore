@@ -1,0 +1,10 @@
+*~
+*.pyc
+*.class
+*.swp
+*.o
+*.hi
+*.retry
+.vagrant
+*.log
+.vscode/
