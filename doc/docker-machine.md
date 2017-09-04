@@ -35,7 +35,7 @@ Mmchine on a host running Windows or Mac operating systems.
   VBoxManage showvminfo default --machinereadable | grep SharedFolder
   ```
 
-6. Map the currnet workspace folder to Docker machine if required
+6. Map the current workspace folder to Docker machine if required
 
   ```
   VBoxManage.exe sharedfolder add default --name /ws --hostpath %cd% --automount
