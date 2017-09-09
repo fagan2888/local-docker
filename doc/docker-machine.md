@@ -177,3 +177,11 @@ services running in multiple docker containers as subdomains.
   ```
   docker-compose rm
   ```
+
+### Run Jupyter notebooks
+
+1. Run the Jupyter notebook
+docker run -it --rm -p 0.0.0.0:8888:8888 jupyter/minimal-notebook
+
+2. Run the Jupyter lab
+docker run -it --rm -p 0.0.0.0:8888:8888 jupyter/minimal-notebook start.sh jupyter lab
