@@ -41,6 +41,13 @@ Mmchine on a host running Windows or Mac operating systems.
   VBoxManage.exe sharedfolder add default --name /ws --hostpath %cd% --automount
   ```
 
+7. Remove the ws folder once done
+
+  ```
+  VBoxManage.exe sharedfolder remove default --name /ws
+  ```
+
+
 ### Build the workspace container
 
 This container will be used to develop software and run docker commands as
